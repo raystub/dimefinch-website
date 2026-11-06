@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activity Worksheets · Dimefinch</title>
+  <meta name="description" content="Free printable worksheets for the Dimefinch Teacher Guide: tokens, savings goal cards, price-per-ounce, needs and wants, budget jars, compound interest, stock tracker, sales tax and scam spotting.">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root { --ink: #1E1B4B; --line: #C9CBE8; --soft: #F3F5FF; --brand: #5B5BF7; }
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 24px; padding: 0; list-style: none; }
+    .toc a { display: inline-block; padding: 8px 12px; border-radius: 999px; background: #fff; border: 2px solid var(--line); font-weight: 800; font-size: 14px; color: var(--ink); text-decoration: none; }
+    .print { display: inline-block; padding: 10px 16px; border-radius: 12px; background: var(--brand); color: #fff; font-weight: 800; border: 0; font-size: 15px; cursor: pointer; }
+    .sheet { background: #fff; border-radius: 18px; padding: 28px 30px; margin: 22px 0; box-shadow: 0 6px 24px rgba(30, 27, 75, 0.06); color: var(--ink); }
+    .sheet h2 { margin: 0 0 4px; font-size: 26px; }
+    .sheet .for { font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #6B6F94; margin: 0 0 10px; }
+    .sheet .how { font-size: 15px; margin: 0 0 14px; }
+    .nameline { display: flex; gap: 24px; font-size: 15px; font-weight: 700; margin: 0 0 16px; }
+    .nameline span { flex: 1; border-bottom: 2px solid var(--ink); padding-bottom: 2px; }
+    .grid { display: grid; gap: 10px; }
+    .g2 { grid-template-columns: repeat(2, 1fr); }
+    .g3 { grid-template-columns: repeat(3, 1fr); }
+    .g5 { grid-template-columns: repeat(5, 1fr); }
+    .cut { border: 2px dashed var(--line); border-radius: 12px; padding: 12px; break-inside: avoid; }
+    .token { aspect-ratio: 1; border-radius: 50%; border: 3px solid var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; text-align: center; line-height: 1.1; }
+    .token small { font-size: 10px; font-weight: 800; letter-spacing: 0.06em; }
+    .card-title { font-size: 18px; font-weight: 900; margin: 0 0 4px; }
+    .big-emoji { font-size: 34px; line-height: 1; }
+    .fill { display: block; margin-top: 8px; font-size: 15px; }
+    .fill b { display: inline-block; min-width: 70px; border-bottom: 2px solid var(--ink); }
+    table.ws { width: 100%; border-collapse: collapse; font-size: 15px; margin: 6px 0 12px; }
+    table.ws th, table.ws td { border: 2px solid var(--line); padding: 10px 8px; text-align: left; }
+    table.ws th { background: var(--soft); font-weight: 900; }
+    table.ws td.blank { min-width: 90px; }
+    .jar { border: 3px solid var(--ink); border-radius: 14px 14px 28px 28px; padding: 16px 10px; text-align: center; }
+    .jar .label { font-size: 30px; font-weight: 900; letter-spacing: 0.04em; }
+    .tag { border: 3px solid var(--ink); border-radius: 10px 30px 30px 10px; padding: 14px 16px 14px 36px; position: relative; }
+    .tag::before { content: ''; position: absolute; left: 12px; top: 50%; width: 10px; height: 10px; margin-top: -5px; border-radius: 50%; border: 2px solid var(--ink); }
+    .tag .price { font-size: 28px; font-weight: 900; }
+    .msg { border: 2px solid var(--line); border-radius: 14px; padding: 12px 14px; font-size: 15px; }
+    .msg .from { font-size: 12px; font-weight: 800; color: #6B6F94; text-transform: uppercase; letter-spacing: 0.05em; }
+    .vote { display: flex; gap: 16px; margin-top: 10px; font-weight: 800; font-size: 14px; }
+    .box { display: inline-block; width: 16px; height: 16px; border: 2px solid var(--ink); border-radius: 4px; vertical-align: -3px; margin-right: 4px; }
+    .key td, .key th { font-size: 14px; }
+    .note { font-size: 13px; color: #55597a; }
+    .scroll { overflow-x: auto; }
+    table.ws, .key h3 { break-inside: avoid; }
+    .key h3 { break-after: avoid; margin: 16px 0 4px; }
+    table.ws td.blank { height: 34px; }
+    @media (max-width: 640px) {
+      .sheet { padding: 20px 16px; }
+      .g3, .g5 { grid-template-columns: repeat(2, 1fr); }
+      .g2 { grid-template-columns: 1fr; }
+      table.ws { font-size: 12px; }
+      table.ws th, table.ws td { padding: 6px 4px; }
+      table.ws td.blank { min-width: 0; }
+      .nameline { gap: 12px; }
+    }
+    @media print {
+      @page { size: letter; margin: 0.5in; }
+      header.nav, footer, .noprint { display: none !important; }
+      body { background: #fff; }
+      main.doc { max-width: none; padding: 0; margin: 0; }
+      .sheet { box-shadow: none; border-radius: 0; margin: 0; padding: 0; break-after: page; }
+      .sheet:last-of-type { break-after: auto; }
+      .g3 { grid-template-columns: repeat(3, 1fr); }
+      .g5 { grid-template-columns: repeat(5, 1fr); }
+      a { color: inherit; text-decoration: none; }
+      table.ws th { background: #EEE; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="icon.png" alt="">Dimefinch</a>
+    <nav class="nav-links">
+      <a href="teachers.html">Teacher Guide</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="noprint">
+    <h1>Activity Worksheets</h1>
+    <p class="updated">Printables for the <a href="teachers.html">Dimefinch Teacher Guide</a>. Each worksheet prints on its own page (US Letter). Print them all, or use your browser’s page range to print just the ones you need.</p>
+    <ul class="toc">
+      <li><a href="#tokens">1 · Tokens</a></li>
+      <li><a href="#goals">2 · Goal cards</a></li>
+      <li><a href="#spending">3 · Price per ounce</a></li>
+      <li><a href="#needs">4 · Needs &amp; wants</a></li>
+      <li><a href="#jars">5 · Budget jars</a></li>
+      <li><a href="#snowball">6 · Snowball chart</a></li>
+      <li><a href="#stocks">7 · Stock tracker</a></li>
+      <li><a href="#tax">8 · Tax tags</a></li>
+      <li><a href="#scam">9 · Real or scam?</a></li>
+      <li><a href="#key">Answer key</a></li>
+    </ul>
+    <button class="print" onclick="window.print()">Print all worksheets</button>
+  </div>
+
+  <!-- 1 Tokens -->
+  <section class="sheet" id="tokens">
+    <p class="for">Money Basics · Credit &amp; Debt</p>
+    <h2>🪙 Classroom tokens</h2>
+    <p class="how">Cut out the tokens. Use 3 per student for the Classroom Market, or 10 each for the Borrowing Game (students pay back 12).</p>
+    <div class="grid g5">
+      <div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div>
+      <div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div>
+      <div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div>
+      <div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div><div class="token"><small>DIME</small>1<small>TOKEN</small></div>
+      <div class="token"><small>DIME</small>5<small>TOKENS</small></div><div class="token"><small>DIME</small>5<small>TOKENS</small></div><div class="token"><small>DIME</small>5<small>TOKENS</small></div><div class="token"><small>DIME</small>5<small>TOKENS</small></div><div class="token"><small>DIME</small>5<small>TOKENS</small></div>
+    </div>
+    <p class="note">Borrowing Game: lend each student 10 tokens. At the end of class they repay 12. Ask: who paid the extra 2, and why does the lender charge it?</p>
+  </section>
+
+  <!-- 2 Goal cards -->
+  <section class="sheet" id="goals">
+    <p class="for">Saving Superpowers</p>
+    <h2>🎯 Savings goal cards</h2>
+    <p class="how">Cut out the cards. Each student picks one, chooses how much to save each week, and divides to find how many weeks it will take.</p>
+    <div class="grid g2">
+      <div class="cut"><div class="big-emoji">🚲</div><p class="card-title">New bike · $120</p><span class="fill">I can save <b>$</b> a week.</span><span class="fill">$120 ÷ <b>$</b> = <b>&nbsp;</b> weeks</span></div>
+      <div class="cut"><div class="big-emoji">🎮</div><p class="card-title">Video game · $60</p><span class="fill">I can save <b>$</b> a week.</span><span class="fill">$60 ÷ <b>$</b> = <b>&nbsp;</b> weeks</span></div>
+      <div class="cut"><div class="big-emoji">⚽</div><p class="card-title">Soccer ball · $24</p><span class="fill">I can save <b>$</b> a week.</span><span class="fill">$24 ÷ <b>$</b> = <b>&nbsp;</b> weeks</span></div>
+      <div class="cut"><div class="big-emoji">🎨</div><p class="card-title">Art set · $45</p><span class="fill">I can save <b>$</b> a week.</span><span class="fill">$45 ÷ <b>$</b> = <b>&nbsp;</b> weeks</span></div>
+      <div class="cut"><div class="big-emoji">🎧</div><p class="card-title">Headphones · $80</p><span class="fill">I can save <b>$</b> a week.</span><span class="fill">$80 ÷ <b>$</b> = <b>&nbsp;</b> weeks</span></div>
+      <div class="cut"><div class="big-emoji">📚</div><p class="card-title">Book · $15</p><span class="fill">I can save <b>$</b> a week.</span><span class="fill">$15 ÷ <b>$</b> = <b>&nbsp;</b> weeks</span></div>
+    </div>
+    <p class="note">Challenge: what if you saved $2 more each week? How many weeks sooner would you reach your goal?</p>
+  </section>
+
+  <!-- 3 Price per ounce -->
+  <section class="sheet" id="spending">
+    <p class="for">Smart Spending</p>
+    <h2>🛒 Which is the better deal?</h2>
+    <div class="nameline"><span>Name</span><span>Date</span></div>
+    <p class="how">Divide the price by the ounces to find the price per ounce. Circle the better deal. Is bigger always cheaper?</p>
+    <table class="ws">
+      <tr><th>Item</th><th>Size</th><th>Price</th><th>Price per ounce</th><th>Better deal?</th></tr>
+      <tr><td rowspan="2">🥣 Cereal</td><td>12 oz</td><td>$3.60</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>18 oz</td><td>$4.86</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td rowspan="2">🧃 Juice</td><td>32 oz</td><td>$2.56</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>64 oz</td><td>$5.76</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td rowspan="2">🥜 Peanut butter</td><td>16 oz</td><td>$2.40</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>40 oz</td><td>$5.20</td><td class="blank"></td><td class="blank"></td></tr>
+    </table>
+    <p class="how"><strong>Your turn:</strong> find the same item in two sizes in a store flyer.</p>
+    <table class="ws">
+      <tr><th>Item</th><th>Size</th><th>Price</th><th>Price per ounce</th><th>Better deal?</th></tr>
+      <tr><td rowspan="2" class="blank">&nbsp;</td><td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td class="blank">&nbsp;</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    </table>
+  </section>
+
+  <!-- 4 Needs and wants -->
+  <section class="sheet" id="needs">
+    <p class="for">Smart Spending</p>
+    <h2>🤔 Needs and wants cards</h2>
+    <p class="how">Cut out the cards and sort them into two piles: NEEDS and WANTS. Some are tricky. Be ready to explain your choice.</p>
+    <div class="grid g5">
+      <div class="cut" style="text-align:center"><div class="big-emoji">🍎</div><p class="card-title">Healthy food</p></div>
+      <div class="cut" style="text-align:center"><div class="big-emoji">🧥</div><p class="card-title">Winter coat</p></div>
+      <div class="cut" style="text-align:center"><div class="big-emoji">🎮</div><p class="card-title">New video game</p></div>
+      <div class="cut" style="text-align:center"><div class="big-emoji">💧</div><p class="card-title">Water</p></div>
+      <div class="cut" style="text-align:center"><div class="big-emoji">🍭</div><p class="card-title">Candy</p></div>
+      <div class="cut" style="text-align:center"><div class="big-emoji">👟</div><p class="card-title">Shoes that fit</p></div>
+      <div class="cut" style="text-align:center"><div class="big-emoji">✨</div><p class="card-title">Light-up sneakers</p></div>
+      <div class="cut" style="text-align:center"><div class="big-emoji">🛏️</div><p class="card-title">A bed</p></div>
+      <div class="cut" style="text-align:center"><div class="big-emoji">💊</div><p class="card-title">Medicine</p></div>
+      <div class="cut" style="text-align:center"><div class="big-emoji">🎟️</div><p class="card-title">Movie ticket</p></div>
+    </div>
+    <div class="grid g2" style="margin-top:16px">
+      <div class="jar"><div class="label">NEEDS</div><p class="note">Things we must have to live and be safe</p></div>
+      <div class="jar"><div class="label">WANTS</div><p class="note">Things that are nice to have</p></div>
+    </div>
+  </section>
+
+  <!-- 5 Budget jars -->
+  <section class="sheet" id="jars">
+    <p class="for">Budget Builders</p>
+    <h2>🫙 Save, Spend, Give</h2>
+    <div class="nameline"><span>Group</span><span>Date</span></div>
+    <p class="how">Cut out the jar labels and tape them to cups. Split your $20 between the jars, then fill in your plan.</p>
+    <div class="grid g3">
+      <div class="jar"><div class="big-emoji">🐷</div><div class="label">SAVE</div></div>
+      <div class="jar"><div class="big-emoji">🛍️</div><div class="label">SPEND</div></div>
+      <div class="jar"><div class="big-emoji">💝</div><div class="label">GIVE</div></div>
+    </div>
+    <table class="ws" style="margin-top:18px">
+      <tr><th>Jar</th><th>Amount</th><th>What it’s for</th></tr>
+      <tr><td>🐷 Save</td><td class="blank">$</td><td class="blank"></td></tr>
+      <tr><td>🛍️ Spend</td><td class="blank">$</td><td class="blank"></td></tr>
+      <tr><td>💝 Give</td><td class="blank">$</td><td class="blank"></td></tr>
+      <tr><th>Total</th><th>$20</th><th>Does it add up to $20?</th></tr>
+    </table>
+    <p class="how"><strong>Surprise!</strong> Your bike tire is flat and costs $4 to fix. Which jar does the money come from? Write how your plan changes:</p>
+    <p class="fill"><b style="width:100%">&nbsp;</b></p>
+    <p class="fill"><b style="width:100%">&nbsp;</b></p>
+  </section>
+
+  <!-- 6 Snowball chart -->
+  <section class="sheet" id="snowball">
+    <p class="for">Banks &amp; Interest</p>
+    <h2>⛄ The snowball chart</h2>
+    <div class="nameline"><span>Name</span><span>Date</span></div>
+    <p class="how">Two friends each start with $100. <strong>Saver A</strong> earns 10% <em>compound</em> interest: each year, add 10% of what they have now. <strong>Saver B</strong> gets a flat $10 every year. Round to the nearest cent.</p>
+    <table class="ws">
+      <tr><th>Year</th><th>Saver A: compound 10%</th><th>Saver B: flat $10</th><th>Who’s ahead?</th></tr>
+      <tr><td>Start</td><td>$100.00</td><td>$100.00</td><td>Tied</td></tr>
+      <tr><td>1</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>2</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>3</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>4</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>5</td><td class="blank"></td><td class="blank"></td><td class="blank"></td></tr>
+    </table>
+    <p class="how"><strong>Think:</strong> the gap between them gets bigger every year. Why?</p>
+    <p class="fill"><b style="width:100%">&nbsp;</b></p>
+    <p class="note">Hint: in year 2, Saver A earns interest on $110, not $100.</p>
+  </section>
+
+  <!-- 7 Stock tracker -->
+  <section class="sheet" id="stocks">
+    <p class="for">Investing Island</p>
+    <h2>📈 My stock tracker</h2>
+    <div class="nameline"><span>Name</span><span>My company</span></div>
+    <p class="how">Write the price your teacher announces each day. Work out how much it went up (+) or down (−) since yesterday.</p>
+    <table class="ws">
+      <tr><th>Day</th><th>Price</th><th>Change since yesterday</th><th>What might have happened?</th></tr>
+      <tr><td>Monday</td><td class="blank">$</td><td>Start</td><td class="blank"></td></tr>
+      <tr><td>Tuesday</td><td class="blank">$</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>Wednesday</td><td class="blank">$</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>Thursday</td><td class="blank">$</td><td class="blank"></td><td class="blank"></td></tr>
+      <tr><td>Friday</td><td class="blank">$</td><td class="blank"></td><td class="blank"></td></tr>
+    </table>
+    <p class="how">Did your share go up or down for the whole week? <span style="display:inline-block;min-width:140px;border-bottom:2px solid var(--ink)">&nbsp;</span></p>
+    <p class="how">If you had split your money between all the companies in class, would your week have been calmer? Why?</p>
+    <p class="fill"><b style="width:100%">&nbsp;</b></p>
+    <p class="note">For teachers: announce a made-up price each day, with a short “news” reason (a new product, a bad review, a snow day).</p>
+  </section>
+
+  <!-- 8 Tax tags -->
+  <section class="sheet" id="tax">
+    <p class="for">Paychecks &amp; Taxes</p>
+    <h2>🧾 Add the sales tax</h2>
+    <div class="nameline"><span>Name</span><span>Date</span></div>
+    <p class="how">In our pretend town, sales tax is 7%. Find the tax (price × 0.07) and the total you pay at the register.</p>
+    <div class="grid g2">
+      <div class="tag"><div class="price">$2.00</div><span class="fill">Tax: <b>$</b></span><span class="fill">Total: <b>$</b></span></div>
+      <div class="tag"><div class="price">$10.00</div><span class="fill">Tax: <b>$</b></span><span class="fill">Total: <b>$</b></span></div>
+      <div class="tag"><div class="price">$25.00</div><span class="fill">Tax: <b>$</b></span><span class="fill">Total: <b>$</b></span></div>
+      <div class="tag"><div class="price">$40.00</div><span class="fill">Tax: <b>$</b></span><span class="fill">Total: <b>$</b></span></div>
+    </div>
+    <p class="how" style="margin-top:18px"><strong>Tax map:</strong> list three things on your way to school that taxes help pay for.</p>
+    <p class="fill">1. <b style="width:90%">&nbsp;</b></p>
+    <p class="fill">2. <b style="width:90%">&nbsp;</b></p>
+    <p class="fill">3. <b style="width:90%">&nbsp;</b></p>
+    <p class="note">Real sales tax rates are different in every state and town, and some states have none.</p>
+  </section>
+
+  <!-- 9 Real or scam -->
+  <section class="sheet" id="scam">
+    <p class="for">Money Safety</p>
+    <h2>🛡️ Real or scam?</h2>
+    <p class="how">Cut out the messages. Read each one and vote: real or scam? Circle the warning signs.</p>
+    <div class="grid g2">
+      <div class="msg"><div class="from">Text message · unknown number</div>🎉 YOU WON a free phone! Click this link and type in your parent’s card number to pay for shipping.<div class="vote"><span><span class="box"></span>Real</span><span><span class="box"></span>Scam</span></div></div>
+      <div class="msg"><div class="from">Class app · your teacher</div>The field trip form is in your take-home folder. Please bring it back signed by Friday.<div class="vote"><span><span class="box"></span>Real</span><span><span class="box"></span>Scam</span></div></div>
+      <div class="msg"><div class="from">Game chat · “GameAdmin_Official”</div>Free game coins for you! Just tell me your password so I can add them to your account.<div class="vote"><span><span class="box"></span>Real</span><span><span class="box"></span>Scam</span></div></div>
+      <div class="msg"><div class="from">Card in the mail · Grandma</div>Happy birthday! I’m proud of you. Love, Grandma.<div class="vote"><span><span class="box"></span>Real</span><span><span class="box"></span>Scam</span></div></div>
+      <div class="msg"><div class="from">Email · “Account Team”</div>URGENT! Your account will be DELETED in 1 hour unless you log in here right now.<div class="vote"><span><span class="box"></span>Real</span><span><span class="box"></span>Scam</span></div></div>
+      <div class="msg"><div class="from">Email · your public library</div>Reminder: your library book is due next Friday. You can renew it at the front desk.<div class="vote"><span><span class="box"></span>Real</span><span><span class="box"></span>Scam</span></div></div>
+    </div>
+    <p class="note" style="margin-top:12px">Rule for everyone: if a message asks for a password, a card number, or says “hurry,” stop and show a trusted grown-up.</p>
+  </section>
+
+  <!-- Answer key -->
+  <section class="sheet key" id="key">
+    <p class="for">For teachers</p>
+    <h2>🔑 Answer key</h2>
+
+    <h3>3 · Which is the better deal?</h3>
+    <table class="ws">
+      <tr><th>Item</th><th>Small</th><th>Large</th><th>Better deal</th></tr>
+      <tr><td>Cereal</td><td>$3.60 ÷ 12 = $0.30/oz</td><td>$4.86 ÷ 18 = $0.27/oz</td><td>Large</td></tr>
+      <tr><td>Juice</td><td>$2.56 ÷ 32 = $0.08/oz</td><td>$5.76 ÷ 64 = $0.09/oz</td><td>Small (bigger isn’t always cheaper!)</td></tr>
+      <tr><td>Peanut butter</td><td>$2.40 ÷ 16 = $0.15/oz</td><td>$5.20 ÷ 40 = $0.13/oz</td><td>Large</td></tr>
+    </table>
+
+    <h3>6 · The snowball chart</h3>
+    <table class="ws">
+      <tr><th>Year</th><th>Saver A (compound 10%)</th><th>Saver B (flat $10)</th><th>Gap</th></tr>
+      <tr><td>1</td><td>$110.00</td><td>$110.00</td><td>$0.00</td></tr>
+      <tr><td>2</td><td>$121.00</td><td>$120.00</td><td>$1.00</td></tr>
+      <tr><td>3</td><td>$133.10</td><td>$130.00</td><td>$3.10</td></tr>
+      <tr><td>4</td><td>$146.41</td><td>$140.00</td><td>$6.41</td></tr>
+      <tr><td>5</td><td>$161.05</td><td>$150.00</td><td>$11.05</td></tr>
+    </table>
+    <p class="note">The gap grows because Saver A earns interest on past interest, too.</p>
+
+    <h3>8 · Add the sales tax (7%)</h3>
+    <table class="ws">
+      <tr><th>Price</th><th>Tax</th><th>Total</th></tr>
+      <tr><td>$2.00</td><td>$0.14</td><td>$2.14</td></tr>
+      <tr><td>$10.00</td><td>$0.70</td><td>$10.70</td></tr>
+      <tr><td>$25.00</td><td>$1.75</td><td>$26.75</td></tr>
+      <tr><td>$40.00</td><td>$2.80</td><td>$42.80</td></tr>
+    </table>
+
+    <h3>9 · Real or scam?</h3>
+    <table class="ws">
+      <tr><th>Message</th><th>Answer</th><th>Warning signs</th></tr>
+      <tr><td>Free phone</td><td>Scam</td><td>Prize you didn’t enter, unknown sender, asks for a card number</td></tr>
+      <tr><td>Field trip form</td><td>Real</td><td>Known sender, nothing asked for online</td></tr>
+      <tr><td>Free game coins</td><td>Scam</td><td>Asks for your password; real staff never do</td></tr>
+      <tr><td>Grandma’s card</td><td>Real</td><td>Someone you know, asks for nothing</td></tr>
+      <tr><td>Account deleted</td><td>Scam</td><td>“Urgent,” a short deadline, a log-in link</td></tr>
+      <tr><td>Library reminder</td><td>Real</td><td>Expected message, no link or payment needed</td></tr>
+    </table>
+
+    <h3>2 · Goal cards (example answers)</h3>
+    <p class="note">Bike $120 at $10/week = 12 weeks · Video game $60 at $5 = 12 weeks · Soccer ball $24 at $3 = 8 weeks · Art set $45 at $5 = 9 weeks · Headphones $80 at $8 = 10 weeks · Book $15 at $3 = 5 weeks. If the division isn’t even, round up: you need one more week to finish.</p>
+
+    <h3>4 · Needs and wants (suggested)</h3>
+    <p class="note">Needs: healthy food, winter coat, water, shoes that fit, a bed, medicine. Wants: video game, candy, light-up sneakers, movie ticket. Discuss: shoes are a need, but <em>light-up</em> shoes are a want.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Swipefinch LLC · Free to print and copy for classroom use</span>
+    <nav class="social" aria-label="Dimefinch on social media"><a href="https://instagram.com/dimefinch" rel="noopener">Instagram</a><a href="https://x.com/dimefinch" rel="noopener">X</a><a href="https://www.tiktok.com/@dimefinch" rel="noopener">TikTok</a></nav>
+    <nav><a href="teachers.html">For Teachers</a><a href="privacy.html">Privacy Policy</a><a href="support.html">Support</a></nav>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Letter to Families · Dimefinch</title>
+  <meta name="description" content="A printable one-page letter teachers can send home to introduce Dimefinch, the money-skills app for kids 7–12.">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root { --ink: #1E1B4B; --line: #C9CBE8; --brand: #5B5BF7; }
+    .tip { background: #FFF7E0; border-radius: 14px; padding: 12px 16px; font-size: 15px; margin: 0 0 18px; }
+    .print { display: inline-block; padding: 10px 16px; border-radius: 12px; background: var(--brand); color: #fff; font-weight: 800; border: 0; font-size: 15px; cursor: pointer; margin-bottom: 18px; }
+    .letter { background: #fff; border-radius: 18px; padding: 34px 38px; box-shadow: 0 6px 24px rgba(30, 27, 75, 0.06); color: var(--ink); font-size: 15.5px; line-height: 1.5; }
+    .letter .top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .letter .top img { width: 44px; height: 44px; border-radius: 12px; }
+    .letter .top b { font-size: 22px; }
+    .letter h2 { font-size: 18px; margin: 16px 0 4px; }
+    .letter ul { margin: 4px 0 0; padding-left: 20px; }
+    .letter li { margin: 2px 0; }
+    .edit { border-bottom: 2px dashed var(--brand); padding: 0 4px; min-width: 80px; display: inline-block; outline: none; background: #F3F5FF; border-radius: 4px 4px 0 0; }
+    .edit:focus { background: #E8EAFF; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+    .sign { margin-top: 18px; }
+    .small { font-size: 12.5px; color: #55597a; margin-top: 14px; }
+    @media (max-width: 640px) { .letter { padding: 22px 18px; } .two { grid-template-columns: 1fr; } }
+    @media print {
+      @page { size: letter; margin: 0.5in; }
+      header.nav, footer, .noprint { display: none !important; }
+      body { background: #fff; }
+      main.doc { max-width: none; padding: 0; margin: 0; }
+      .letter { box-shadow: none; padding: 0; border-radius: 0; font-size: 13.5px; line-height: 1.42; }
+      .letter h2 { font-size: 15.5px; margin-top: 11px; }
+      .edit { background: none; border-bottom: none; padding: 0; min-width: 0; }
+      .edit:empty { border-bottom: 1.5px solid var(--ink); min-width: 140px; }
+      .two { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="icon.png" alt="">Dimefinch</a>
+    <nav class="nav-links">
+      <a href="teachers.html">Teacher Guide</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="noprint">
+    <h1>Letter to Families</h1>
+    <p class="updated">A one-page note to send home with your class. It fits on one sheet of US Letter paper.</p>
+    <p class="tip">✏️ Click any shaded blank to type your own details, like your name and class, then print. Blanks you leave empty print as lines families can fill in.</p>
+    <button class="print" onclick="window.print()">Print the letter</button>
+  </div>
+
+  <article class="letter">
+    <div class="top"><img src="icon.png" alt=""><b>Dimefinch</b></div>
+
+    <p>Dear families of <span class="edit" contenteditable="true" aria-label="Class or grade"></span>,</p>
+
+    <p>This <span class="edit" contenteditable="true" aria-label="Month or term"></span>, our class is learning about money: earning, saving, spending wisely and giving. Alongside our lessons, we’re using <strong>Dimefinch</strong>, a money-skills app for kids ages 7–12. I wanted to share how it works so you can keep the conversation going at home.</p>
+
+    <h2>What your child will do</h2>
+    <ul>
+      <li>Short, colorful lessons followed by a 3-question quiz that explains every answer. Every card can be <strong>read aloud</strong>.</li>
+      <li>Earn play coins, then choose to spend them or save them in a pretend bank that pays interest.</li>
+      <li>Play money games about needs and wants, budgeting and investing.</li>
+      <li>A one-minute money fact each day and a short video every Friday.</li>
+    </ul>
+
+    <h2>Safe by design</h2>
+    <div class="two">
+      <ul>
+        <li>No ads, ever</li>
+        <li>No accounts, chat or contact with strangers</li>
+        <li>No tracking: progress stays on the device</li>
+      </ul>
+      <ul>
+        <li>Coins are play money and can’t be bought</li>
+        <li>Grown-up settings sit behind a parent gate</li>
+        <li>Free to try; one optional Family Unlock, no subscription</li>
+      </ul>
+    </div>
+
+    <h2>If you’d like to use it at home</h2>
+    <ul>
+      <li>Search <strong>“Dimefinch”</strong> on the App Store or Google Play. Every lesson for ages 7–10 is free.</li>
+      <li>Tap the 🔒 in the corner to open the grown-ups area. You’ll see a <strong>weekly summary</strong> of what your child learned, with a question to talk about together.</li>
+      <li>Set up <strong>chores</strong> (like making the bed); your child taps “I did it!” and you approve them for coins.</li>
+      <li>Siblings can each have their own profile on one device (up to 6).</li>
+    </ul>
+
+    <h2>Questions to ask at dinner</h2>
+    <ul>
+      <li>What’s something you want, and how long would it take to save for it?</li>
+      <li>Is that a need or a want? How can you tell?</li>
+      <li>If you had $10, how would you split it between saving, spending and giving?</li>
+    </ul>
+
+    <p>Using the app at home is completely optional. Thank you for helping your child build habits that last a lifetime. Please reach out with any questions.</p>
+
+    <div class="sign">
+      <p style="margin:0">Warmly,</p>
+      <p style="margin:6px 0 0"><span class="edit" contenteditable="true" aria-label="Teacher name"></span></p>
+      <p style="margin:2px 0 0"><span class="edit" contenteditable="true" aria-label="School"></span> · <span class="edit" contenteditable="true" aria-label="Email or phone"></span></p>
+    </div>
+
+    <p class="small">Learn more at dimefinch.com · Privacy policy: dimefinch.com/privacy.html · Dimefinch is made by Swipefinch LLC. Lessons are general education, not financial advice.</p>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Swipefinch LLC · Free to print and copy for classroom use</span>
+    <nav class="social" aria-label="Dimefinch on social media"><a href="https://instagram.com/dimefinch" rel="noopener">Instagram</a><a href="https://x.com/dimefinch" rel="noopener">X</a><a href="https://www.tiktok.com/@dimefinch" rel="noopener">TikTok</a></nav>
+    <nav><a href="teachers.html">For Teachers</a><a href="privacy.html">Privacy Policy</a><a href="support.html">Support</a></nav>
+  </div>
+</footer>
+
+</body>
+</html>
