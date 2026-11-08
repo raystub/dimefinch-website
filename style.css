@@ -156,3 +156,15 @@ footer a:hover { color: var(--primary-dark); }
   .grid-5 { grid-template-columns: 1fr 1fr; }
   .phone { width: 270px; }
 }
+
+/* Pricing */
+.price-grid { max-width: 880px; }
+.price-card { display: flex; flex-direction: column; }
+.price-card.family { border: 2px solid var(--primary); }
+.price-card .price { font-size: 40px; font-weight: 900; letter-spacing: -0.02em; margin: 6px 0 4px; }
+.price-card .price small { font-size: 15px; font-weight: 700; color: var(--sub); margin-left: 6px; letter-spacing: 0; }
+.price-card .tag { margin: 0 0 10px; }
+.price-card ul { margin: 8px 0 0; padding-left: 18px; color: var(--sub); display: grid; gap: 6px; }
+.fine { color: var(--sub); font-size: 14px; max-width: 75ch; margin-top: 20px; }
+.made { color: inherit; font-weight: 800; }
+footer nav { flex-wrap: wrap; row-gap: 10px; } footer nav a { white-space: nowrap; }
